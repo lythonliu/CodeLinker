@@ -9,8 +9,8 @@ import android.widget.Toast;
 public abstract class LinkActivity extends Activity {
     public LinkActivity() {
     }
-
-    public boolean onTouchEvent(MotionEvent event) {
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
         if (event.getPointerCount() != 3) {
             return super.onTouchEvent(event);
         } else {

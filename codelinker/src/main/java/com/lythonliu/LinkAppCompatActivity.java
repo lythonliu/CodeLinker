@@ -10,7 +10,7 @@ import android.widget.Toast;
 public abstract class LinkAppCompatActivity extends AppCompatActivity{
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
+    public boolean dispatchTouchEvent(MotionEvent event) {
         if (event.getPointerCount()==3){
             //"https://github.com/lythonliu/Dialog/blob/master/app/src/main/java/com/lythonliu/dialogdemo/MainActivity.java";
             //com.lythonliu.dialogdemo.MainActivity
