@@ -7,6 +7,8 @@ android {
 
 
     defaultConfig {
+//        https://blog.csdn.net/u014011112/article/details/55511615
+        buildConfigField 'String','APP_NAME','"CodeLinker"'
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
