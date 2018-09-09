@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         buildConfigField 'String','APP_NAME','"CodeLinkerDemo"'
-        applicationId "com.lythonliu.codelinker"
+        applicationId "com.lythonliu.codelinkerdemo"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

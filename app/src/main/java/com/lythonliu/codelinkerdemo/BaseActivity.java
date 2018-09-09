@@ -1,4 +1,4 @@
-package com.lythonliu.codelinker;
+package com.lythonliu.codelinkerdemo;
 
 import com.lythonliu.LinkAppCompatActivity;
 
