@@ -30,7 +30,7 @@ public abstract class LinkFragmentActivity extends FragmentActivity{
             startActivity(intent);
             return true;
         }
-        return super.onTouchEvent(event);
+        return super.dispatchTouchEvent(event);
     }
     public abstract String getAppName();
 }

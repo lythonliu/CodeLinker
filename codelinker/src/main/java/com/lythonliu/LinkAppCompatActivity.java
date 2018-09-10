@@ -30,7 +30,7 @@ public abstract class LinkAppCompatActivity extends AppCompatActivity{
             startActivity(intent);
             return true;
         }
-        return super.onTouchEvent(event);
+        return super.dispatchTouchEvent(event);
     }
     public abstract String getAppName();
 }

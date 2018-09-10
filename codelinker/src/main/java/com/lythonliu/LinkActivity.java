@@ -12,7 +12,7 @@ public abstract class LinkActivity extends Activity {
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
         if (event.getPointerCount() != 3) {
-            return super.onTouchEvent(event);
+            return super.dispatchTouchEvent(event);
         } else {
             Toast.makeText(this, this.getClass().getName() + this.getClass().getCanonicalName(), 1).show();
             StringBuilder stringBuilder = new StringBuilder("https://github.com/lythonliu/");
