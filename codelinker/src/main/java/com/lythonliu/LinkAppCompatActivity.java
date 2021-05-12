@@ -14,9 +14,9 @@ public abstract class LinkAppCompatActivity extends AppCompatActivity{
         if (event.getPointerCount()==3){
             //"https://github.com/lythonliu/Dialog/blob/master/app/src/main/java/com/lythonliu/dialogdemo/MainActivity.java";
             //com.lythonliu.dialogdemo.MainActivity
-            Toast.makeText(this,getClass().getName()+getClass().getCanonicalName(),Toast.LENGTH_LONG).show();
-            StringBuilder stringBuilder = new StringBuilder("https://github.com/lythonliu/");
-            stringBuilder.append(getAppName()).append("/blob/master/app/src/main/java/");
+//            Toast.makeText(this,getClass().getName()+getClass().getCanonicalName(),Toast.LENGTH_LONG).show();
+            StringBuilder stringBuilder = new StringBuilder(getRepository());
+            stringBuilder.append("/blob/master/app/src/main/java/");
             String[] split = getClass().getName().split("\\.");
             for (String s : split) {
                 stringBuilder.append(s).append("/");
@@ -32,5 +32,5 @@ public abstract class LinkAppCompatActivity extends AppCompatActivity{
         }
         return super.dispatchTouchEvent(event);
     }
-    public abstract String getAppName();
+    public abstract String getRepository();
 }

@@ -13,7 +13,7 @@ public class TestLinkActivity extends LinkActivity {
     }
 
     @Override
-    public String getAppName() {
-        return BuildConfig.APP_NAME;
+    public String getRepository() {
+        return BuildConfig.repository;
     }
 }

@@ -14,9 +14,9 @@ public abstract class LinkActivity extends Activity {
         if (event.getPointerCount() != 3) {
             return super.dispatchTouchEvent(event);
         } else {
-            Toast.makeText(this, this.getClass().getName() + this.getClass().getCanonicalName(), 1).show();
-            StringBuilder stringBuilder = new StringBuilder("https://github.com/lythonliu/");
-            stringBuilder.append(this.getAppName()).append("/blob/master/app/src/main/java/");
+//            Toast.makeText(this, this.getClass().getName() + this.getClass().getCanonicalName(), 1).show();
+            StringBuilder stringBuilder = new StringBuilder(getRepository());
+            stringBuilder.append("/blob/master/app/src/main/java/");
             String[] split = this.getClass().getName().split("\\.");
             String[] var4 = split;
             int var5 = split.length;
@@ -37,5 +37,5 @@ public abstract class LinkActivity extends Activity {
         }
     }
 
-    public abstract String getAppName();
+    public abstract String getRepository();
 }
