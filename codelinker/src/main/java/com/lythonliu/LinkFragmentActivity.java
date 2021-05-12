@@ -22,7 +22,7 @@ public abstract class LinkFragmentActivity extends FragmentActivity{
                 stringBuilder.append(s).append("/");
             }
             String str = stringBuilder.toString();
-            String replace = str.substring(0,str.length()-1)+ ".java";
+            String replace = str.substring(0,str.length()-1)+getFileType();
             Intent intent = new Intent();
             intent.setAction("android.intent.action.VIEW");
             Uri content_url = Uri.parse(replace);
@@ -33,4 +33,8 @@ public abstract class LinkFragmentActivity extends FragmentActivity{
         return super.dispatchTouchEvent(event);
     }
     public abstract String getRepository();
+
+    public String getFileType() {
+        return ".java";
+    }
 }

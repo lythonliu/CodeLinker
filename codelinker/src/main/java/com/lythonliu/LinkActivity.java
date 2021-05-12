@@ -3,6 +3,7 @@ package com.lythonliu;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ public abstract class LinkActivity extends Activity {
             }
 
             String str = stringBuilder.toString();
-            String replace = str.substring(0, str.length() - 1) + ".java";
+            String replace = str.substring(0, str.length() - 1) + getFileType();
             Intent intent = new Intent();
             intent.setAction("android.intent.action.VIEW");
             Uri content_url = Uri.parse(replace);
@@ -35,6 +36,10 @@ public abstract class LinkActivity extends Activity {
             this.startActivity(intent);
             return true;
         }
+    }
+
+    public String getFileType() {
+        return ".java";
     }
 
     public abstract String getRepository();
