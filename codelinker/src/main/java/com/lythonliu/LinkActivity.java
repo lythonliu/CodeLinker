@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
+import com.lythonliu.codelinker.R;
+
 public abstract class LinkActivity extends Activity {
     public LinkActivity() {
     }
@@ -42,5 +44,5 @@ public abstract class LinkActivity extends Activity {
         return ".java";
     }
 
-    public abstract String getRepository();
+    public String getRepository(){ return getString(R.string.repository); };
 }

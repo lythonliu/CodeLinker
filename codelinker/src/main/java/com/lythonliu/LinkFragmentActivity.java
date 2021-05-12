@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentActivity;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
+import com.lythonliu.codelinker.R;
+
 
 public abstract class LinkFragmentActivity extends FragmentActivity{
 
@@ -32,7 +34,7 @@ public abstract class LinkFragmentActivity extends FragmentActivity{
         }
         return super.dispatchTouchEvent(event);
     }
-    public abstract String getRepository();
+    public String getRepository(){ return getString(R.string.repository); };
 
     public String getFileType() {
         return ".java";

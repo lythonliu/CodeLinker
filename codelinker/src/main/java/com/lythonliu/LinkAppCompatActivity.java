@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
+import com.lythonliu.codelinker.BuildConfig;
+import com.lythonliu.codelinker.R;
+
 
 public abstract class LinkAppCompatActivity extends AppCompatActivity{
 
@@ -32,7 +35,7 @@ public abstract class LinkAppCompatActivity extends AppCompatActivity{
         }
         return super.dispatchTouchEvent(event);
     }
-    public abstract String getRepository();
+    public String getRepository(){ return getString(R.string.repository); };
 
     public String getFileType() {
         return ".java";

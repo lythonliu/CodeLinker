@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        buildConfigField 'String','repository','"https://github.com/lythonliu/CodeLinker"'
+//        buildConfigField 'String','repository','"https://github.com/lythonliu/CodeLinker"'
         applicationId "com.lythonliu.codelinkerdemo"
         minSdkVersion 15
         targetSdkVersion 27

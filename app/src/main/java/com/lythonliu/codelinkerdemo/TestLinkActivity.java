@@ -12,8 +12,4 @@ public class TestLinkActivity extends LinkActivity {
         super.onCreate(savedInstanceState);
     }
 
-    @Override
-    public String getRepository() {
-        return BuildConfig.repository;
-    }
 }
