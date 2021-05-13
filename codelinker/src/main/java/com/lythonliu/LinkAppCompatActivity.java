@@ -1,13 +1,10 @@
 package com.lythonliu;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
-import android.widget.Toast;
 
-import com.lythonliu.codelinker.BuildConfig;
+import androidx.appcompat.app.AppCompatActivity;
+import android.view.MotionEvent;
+
 import com.lythonliu.codelinker.R;
 
 
