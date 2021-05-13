@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CodeLinker</string>
     <string name="repository">https://github.com/lythonliu/CodeLinker</string>
+    <string name="app">app</string>
+    <string name="postfix">.java</string>
+    <string name="postfix2">.kt</string>
 </resources>
