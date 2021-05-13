@@ -19,6 +19,10 @@ public class LinkAppCompatActivity extends AppCompatActivity implements LinkInte
             //com.lythonliu.dialogdemo.MainActivity
 //            Toast.makeText(this,getClass().getName()+getClass().getCanonicalName(),Toast.LENGTH_LONG).show();
             StringBuilder stringBuilder = new StringBuilder(getRepository());
+            if ("".equals(getDirect())) { // TODO: 2021/5/13 warning
+                Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+                return true;
+            }
             stringBuilder.append("/blob/master/"+getDirect()+"/src/main/java/");
             String[] split = getClass().getName().split("\\.");
             for (String s : split) {
