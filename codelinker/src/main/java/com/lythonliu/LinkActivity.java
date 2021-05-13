@@ -50,6 +50,15 @@ public class LinkActivity extends Activity implements LinkInterface {
 
     public String getRepository(){ return getString(R.string.repository); };
 
+    /*example public String getDirect() {
+        String className = getComponentName().getClassName();
+        String feature = "";
+        if (11<className.length()&&className.indexOf("feature")>11)
+        feature = ("feature." + className.subSequence(11, className.indexOf("feature") - 1)).replace(".", "/");
+        LogUtils.dTag("getDirect",className,feature);
+        return feature;
+    }
+*/
     @Override
     public String getDirect() {
         return "app";
