@@ -8,11 +8,12 @@ public class LinkHelper {
 
     public static boolean dispatch3(LinkInterface linkInterface) {
         StringBuilder stringBuilder = new StringBuilder(linkInterface.getRepository());
+        if (linkInterface.isRelease())return true;
         if ("".equals(linkInterface.getDirect())) { // TODO: 2021/5/13 warning
             Toast.makeText(linkInterface.getContext(), "", Toast.LENGTH_SHORT).show();
             return true;
         }
-        stringBuilder.append("/blob/master/"+linkInterface.getDirect()+"/src/main/java/");
+        stringBuilder.append("/blob/"+linkInterface.getBranch()+"/"+linkInterface.getDirect()+"/src/main/java/");
         String[] split = linkInterface.getClass().getName().split("\\.");
         String[] var4 = split;
         int var5 = split.length;

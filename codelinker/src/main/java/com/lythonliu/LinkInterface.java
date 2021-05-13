@@ -13,4 +13,8 @@ public interface LinkInterface {
     String getFileType();
 
     void startActivity(Intent intent);
+
+    String getBranch();
+
+    boolean isRelease();
 }

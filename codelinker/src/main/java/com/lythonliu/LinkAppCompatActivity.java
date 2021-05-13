@@ -38,4 +38,14 @@ public class LinkAppCompatActivity extends AppCompatActivity implements LinkInte
     public String getDirect() {
         return getString(R.string.app);
     }
+
+    @Override
+    public String getBranch() {
+        return getString(R.string.branch);
+    }
+
+    @Override
+    public boolean isRelease() {
+        return getResources().getBoolean(R.bool.is_release);
+    }
 }
