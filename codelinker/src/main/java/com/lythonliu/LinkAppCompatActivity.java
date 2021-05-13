@@ -10,7 +10,7 @@ import com.lythonliu.codelinker.BuildConfig;
 import com.lythonliu.codelinker.R;
 
 
-public abstract class LinkAppCompatActivity extends AppCompatActivity{
+public class LinkAppCompatActivity extends AppCompatActivity implements LinkInterface{
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
@@ -19,7 +19,7 @@ public abstract class LinkAppCompatActivity extends AppCompatActivity{
             //com.lythonliu.dialogdemo.MainActivity
 //            Toast.makeText(this,getClass().getName()+getClass().getCanonicalName(),Toast.LENGTH_LONG).show();
             StringBuilder stringBuilder = new StringBuilder(getRepository());
-            stringBuilder.append("/blob/master/app/src/main/java/");
+            stringBuilder.append("/blob/master/"+getDirect()+"/src/main/java/");
             String[] split = getClass().getName().split("\\.");
             for (String s : split) {
                 stringBuilder.append(s).append("/");
@@ -39,5 +39,10 @@ public abstract class LinkAppCompatActivity extends AppCompatActivity{
 
     public String getFileType() {
         return ".java";
+    }
+
+    @Override
+    public String getDirect() {
+        return "app";
     }
 }

@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.lythonliu.codelinker.R;
 
-public abstract class LinkActivity extends Activity {
+public class LinkActivity extends Activity implements LinkInterface {
     public LinkActivity() {
     }
     @Override
@@ -19,7 +19,7 @@ public abstract class LinkActivity extends Activity {
         } else {
 //            Toast.makeText(this, this.getClass().getName() + this.getClass().getCanonicalName(), 1).show();
             StringBuilder stringBuilder = new StringBuilder(getRepository());
-            stringBuilder.append("/blob/master/app/src/main/java/");
+            stringBuilder.append("/blob/master/"+getDirect()+"/src/main/java/");
             String[] split = this.getClass().getName().split("\\.");
             String[] var4 = split;
             int var5 = split.length;
@@ -45,4 +45,9 @@ public abstract class LinkActivity extends Activity {
     }
 
     public String getRepository(){ return getString(R.string.repository); };
+
+    @Override
+    public String getDirect() {
+        return "app";
+    }
 }

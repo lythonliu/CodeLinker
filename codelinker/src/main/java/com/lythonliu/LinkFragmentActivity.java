@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.lythonliu.codelinker.R;
 
 
-public abstract class LinkFragmentActivity extends FragmentActivity{
+public class LinkFragmentActivity extends FragmentActivity implements LinkInterface{
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
@@ -39,7 +39,7 @@ public abstract class LinkFragmentActivity extends FragmentActivity{
     public String getFileType() {
         return ".java";
     }
-
+    @Override
     public String getDirect() {
         return "app";
     }
